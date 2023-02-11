@@ -41,7 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(result => {
         console.log(result);
       })
-      .then(load_mailbox('sent'))
+      .then(() => {
+        load_mailbox('sent');
+      }) 
 
       return false;
       
