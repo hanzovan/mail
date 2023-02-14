@@ -88,7 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
           })      
           emails_view.style.display = 'none';
           email_display.style.display = 'block';
-          email_display.innerHTML = `<strong>${mail.subject}</strong> - from ${mail.sender}:`;
+          email_display.innerHTML = `<div><strong>${mail.subject}</strong></div>
+            <div><i>original-sender</i>: ${mail.sender}</div>
+            <div><i>recipients</i>     : ${mail.recipients}</div>
+            <div><i>sent at</i>        : ${mail.timestamp}</div>`;
           const b = document.createElement('div');
           b.className = 'mail_body';
 
